@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2154
+
+# @describe command-line snippets manager
+
+snippet_path="$HOME/sq/snippets.just"
+
+# @cmd list cli snippets
+list() {
+   just -f "$snippet_path" -l
+}
+
+# @cmd add cli snippet
+# @flag  --ui  Open editor to add snippet
+add() {
+  if [ "$argc_ui" = "1" ]; then
+    line_count=$(awk 'END { print NR+1 }' "$snippet_path")
+    code --goto "$snippet_path:${line_count}"
+  else
+    read -r -p $'\033[1mCli\e[0m: ' cli
+    read -r -p $'\033[1mName: ' name
+    # shellcheck disable=SC2162
+    read -r -p $'\033[1mDesc: ' description
+    {
+      echo ""
+      echo "# ${description}"
+      echo "${name}:"
+      echo "  ${cli}:"
+    } >> "$snippet_path"
+    echo "Done to add ${name}."
+  fi
+}
+
+# @cmd edit cli snippet
+# @arg name snippet name
+edit() {
+  if [ -z "$argc_name" ]; then
+    code "$snippet_path"
+  else
+    line_number=$(awk "/$argc_name/{ print NR+1; exit }" "$HOME/sq/snippets.just")
+    if [ -z "$EDITOR" ]; then
+      code --goto "$snippet_path:${line_number}"
+    elif [[ $EDITOR == vi* ]] ; then
+       $EDITOR +$line_number "$snippet_path"
+    else
+      $EDITOR "$snippet_path"
+    fi
+  fi
+}
+
+eval "$(argc --argc-eval "$0" "$@")"
