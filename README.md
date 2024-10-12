@@ -28,3 +28,6 @@ sq(squirrel) is a command-line snippet manager based on argc(Bash framework) and
 * [argc](https://github.com/sigoden/argc): a Bash CLI framework
 * [just](https://github.com/casey/just): a command runner
 * [pet](https://github.com/knqyf263/pet): Simple command-line snippet manager
+* Just VSCode plugin: https://marketplace.visualstudio.com/items?itemName=skellock.just 
+* Just JetBrains plugin: https://github.com/linux-china/jetbrains-just-plugin
+* Justfile cheat sheet: https://cheatography.com/linux-china/cheat-sheets/justfile/
