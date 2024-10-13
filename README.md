@@ -1,9 +1,22 @@
 sq(squirrel): command-line snippet manager
 ==========================================
 
-sq(squirrel) is a command-line snippet manager based on argc(Bash framework) and Just(command runner).
+sq(squirrel) is a command-line snippet manager based on Just(command runner).
 
-# Get started
+- Bash version: argc(Bash framework)
+- Rust version: native bin without bash and argc required
+
+# Features
+
+# Commands
+
+- list: list snippet - `sq list`
+- add: add new snippet - `sq add` or `sq add`
+- edit: edit snippet - `sq edit snippet_name`
+
+# Bash Edition
+
+### Get started
 
 * Please install [Just](https://github.com/casey/just#packages) and [argc](https://github.com/sigoden/argc#install)
   first.
@@ -11,11 +24,9 @@ sq(squirrel) is a command-line snippet manager based on argc(Bash framework) and
 * Add the `sq` directory to your PATH: `export PATH=$PATH:/path/to/sq`
 * Run `sq list` to see the available snippets
 
-# Commands
+### Rust edition
 
-- list: list snippet - `sq list`
-- add: add new snippet - `sq new` or `sq new --ui`
-- edit: edit snippet - `sq edit snippet_name`
+- Install: `cargo binstall sq-cli`
 
 # Why sq(squirrel)?
 
@@ -28,6 +39,6 @@ sq(squirrel) is a command-line snippet manager based on argc(Bash framework) and
 * [argc](https://github.com/sigoden/argc): a Bash CLI framework
 * [just](https://github.com/casey/just): a command runner
 * [pet](https://github.com/knqyf263/pet): Simple command-line snippet manager
-* Just VSCode plugin: https://marketplace.visualstudio.com/items?itemName=skellock.just 
+* Just VSCode plugin: https://marketplace.visualstudio.com/items?itemName=skellock.just
 * Just JetBrains plugin: https://github.com/linux-china/jetbrains-just-plugin
 * Justfile cheat sheet: https://cheatography.com/linux-china/cheat-sheets/justfile/
