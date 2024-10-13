@@ -1,0 +1,44 @@
+[package]
+name = "sq-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["linux_china <libing.chen@gmail.com>"]
+description = "sq(Squirrel) is a command-line snippet keeper"
+keywords = ["snippet", "squirrel", "cli"]
+categories = ["command-line-utilities"]
+documentation = "https://github.com/linux-china/sq"
+readme = "README.md"
+homepage = "https://github.com/linux-china/sq"
+repository = "https://github.com/linux-china/q"
+license = "Apache-2.0"
+
+[dependencies]
+bytecount = "0.6.8"
+just = "1.36.0"
+clap = "4.5.20"
+colored = "2.1.0"
+dirs = "5.0.1"
+which = "6.0.3"
+
+[profile.release]
+strip = true
+lto = true
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+
+# The profile that 'cargo dist' will build with
+[profile.dist]
+inherits = "release"
+lto = true
+
+# Config for 'cargo dist'
+[workspace.metadata.dist]
+# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.22.1"
+# CI backends to support
+ci = "github"
+# The installers to generate for each app
+installers = []
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
