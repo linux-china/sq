@@ -34,6 +34,11 @@ sq(squirrel) is a command-line snippet manager based on Just(command runner).
 - Just: professional command runner with lots of features, good to save and run commands
 - UX: `snippet.just` is normal justfile, and easy to edit with your favorite editor
 
+# Pueue & sq
+
+If you want to run cron job, and you can use [pueue](https://github.com/Nukesor/pueue) with sq.
+Instead of sending command line to pueue, and you can change script code of cron job.
+
 # References
 
 * [argc](https://github.com/sigoden/argc): a Bash CLI framework
@@ -42,3 +47,4 @@ sq(squirrel) is a command-line snippet manager based on Just(command runner).
 * Just VSCode plugin: https://marketplace.visualstudio.com/items?itemName=skellock.just
 * Just JetBrains plugin: https://github.com/linux-china/jetbrains-just-plugin
 * Justfile cheat sheet: https://cheatography.com/linux-china/cheat-sheets/justfile/
+* pueue: https://github.com/Nukesor/pueue
