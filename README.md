@@ -37,7 +37,10 @@ sq(squirrel) is a command-line snippet manager based on Just(command runner).
 # Pueue & sq
 
 If you want to run cron job, and you can use [pueue](https://github.com/Nukesor/pueue) with sq.
-Instead of sending command line to pueue, and you can change script code of cron job.
+Instead of sending command line to pueue, you can use sq:
+
+- Flexible to change script after added to pueue
+- Easy to manage script with sq, no shell escaping, no worry about long command line.
 
 # References
 
