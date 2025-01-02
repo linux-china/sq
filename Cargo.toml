@@ -14,11 +14,11 @@ license = "Apache-2.0"
 
 [dependencies]
 bytecount = "0.6.8"
-just = "1.36.0"
-clap = "4.5.20"
-colored = "2.1.0"
-dirs = "5.0.1"
-which = "6.0.3"
+just = "1.38.0"
+clap = "4.5"
+colored = "2.2"
+dirs = "5.0"
+which = "7"
 
 [profile.release]
 strip = true
