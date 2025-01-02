@@ -1,6 +1,6 @@
 [package]
 name = "sq-cli"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["linux_china <libing.chen@gmail.com>"]
 description = "sq(Squirrel) is a command-line snippet keeper"
