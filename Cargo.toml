@@ -13,8 +13,8 @@ repository = "https://github.com/linux-china/q"
 license = "Apache-2.0"
 
 [dependencies]
-bytecount = "0.6.8"
-just = "1.39.0"
+bytecount = "0.6.9"
+just = "1.40.0"
 clap = "4.5"
 colored = "2.2"
 dirs = "5.0"
