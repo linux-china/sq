@@ -14,7 +14,7 @@ license = "Apache-2.0"
 
 [dependencies]
 bytecount = "0.6.9"
-just = "1.40.0"
+just = "1.42"
 clap = "4.5"
 colored = "2.2"
 dirs = "5.0"
