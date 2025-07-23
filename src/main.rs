@@ -5,7 +5,7 @@ use clap::{Command, Arg, ArgAction, ArgMatches};
 use colored::Colorize;
 use just::summary::Summary;
 
-pub const VERSION: &str = "0.1.1";
+pub const VERSION: &str = "0.1.2";
 
 const SUB_COMMANDS: [&str; 5] = ["list", "add", "edit", "completion", "help"];
 
