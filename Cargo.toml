@@ -16,9 +16,9 @@ license = "Apache-2.0"
 bytecount = "0.6.9"
 just = "1.42"
 clap = "4.5"
-colored = "2.2"
-dirs = "5.0"
-which = "7"
+colored = "3.0"
+dirs = "6.0"
+which = "8"
 
 [profile.release]
 strip = true
@@ -32,10 +32,10 @@ panic = "abort"
 inherits = "release"
 lto = true
 
-# Config for 'cargo dist'
+# Config for 'dist'
 [workspace.metadata.dist]
-# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
-cargo-dist-version = "0.22.1"
+# The preferred dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.28.2"
 # CI backends to support
 ci = "github"
 # The installers to generate for each app
